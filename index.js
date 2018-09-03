@@ -3,6 +3,11 @@ const http = require('http');
 const morgan =require('morgan');
 const bodyParser= require('body-parser');
 
+
+const dishRouter = require('./routes/dishRouter');
+
+
+
 const hostname = 'localhost';
 const port = 3000;
 
@@ -12,7 +17,11 @@ app.use(morgan('dev'));
 
 app.use(bodyParser.json());
 
-app.all('/dishes', (req,res,next)=>{
+
+app.use('/dishes', dishRouter); //mounting here
+
+
+/* app.all('/dishes', (req,res,next)=>{
 res.statusCode=200;
 res.setHeader('Content-type','text/plain');
 next();
@@ -31,12 +40,12 @@ app.put('/dishes',(req,res,next)=>{
 });
 app.delete('/dishes', (req,res,next)=>{
     res.end('Deleting all dishes');
-});
+});*/
 
 
 /* id end point */
 
-app.get('/dishes/:dishId', (req,res,next)=>{
+/* app.get('/dishes/:dishId', (req,res,next)=>{
     res.end('will send details of the dish:' + req.params.dishId);
 });
 app.post('/dishes/:dishId', (req,res,next)=>{
@@ -50,8 +59,8 @@ app.put('/dishes/:dishId',(req,res,next)=>{
 });
 app.delete('/dishes/:dishId', (req,res,next)=>{
     res.end('Deleting dish: ' + req.params.dishId);
-});
-
+}); 
+ */
 
 
 
