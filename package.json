@@ -1,23 +1,18 @@
 {
-  "name": "node-examples",
+  "name": "node-http",
   "version": "1.0.0",
-  "description": "\"simple node example\"",
+  "description": "learning http server with node",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+  "start": "node index"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ranjan1703/nodebasic.git"
-  },
-  "author": "Ranjan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ranjan1703/nodebasic/issues"
-  },
-  "homepage": "https://github.com/ranjan1703/nodebasic#readme",
-  "dependencies": {
-    "npm": "^6.4.1"
-  }
+  "keywords": [
+    "http",
+    "server",
+    "with",
+    "node"
+  ],
+  "author": "ranjan",
+  "license": "ISC"
 }

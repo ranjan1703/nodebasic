@@ -1,20 +1,20 @@
-//This exapmle to illustrate various features of node and how to construct node module
-var rect =require('./rectangle');
-function solveRect(l,b){
-    console.log("Solving for rectangle with l= " + l + " and b = " + b);
-    rect(l,b, (err, rectangle)=>{
-if(err){
-    console.log("ERROR: ", err.message);
-}
-else{
-    console.log("The area of the rectangle of dimensions " + "a= " + l + " and b = " + b + " is " + rectangle.area());
-    console.log("The perimeter of the rectangle of dimensions" + "a= " + l + " and b = " + b + " is " + rectangle.perimeter());
-}
-    });
+//setting up server
+const http =require('http');
 
-    console.log("This statement is after the call to rect()");
-}
+const hostname ='localhost';
+const port =3000;
+const server =http.createServer((req,res)=>{
+    console.log(req.headers);
+    
 
-solveRect(2,4);
-solveRect(3,6);
-solveRect(0,0);
+    res.statusCode=200;
+    res.setHeader('Content-Tpye', 'text/html');
+    res.end('<html><body><h1>Hello Node</h1></body></html>');
+
+})
+
+//starting the server
+
+server.listen(port, hostname, ()=>{
+    console.log(`Server running at http://${hostname}:${port}`)
+})
