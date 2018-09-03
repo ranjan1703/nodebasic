@@ -1,18 +1,21 @@
 {
-  "name": "node-http",
+  "name": "express-server",
   "version": "1.0.0",
-  "description": "learning http server with node",
+  "description": "node server which serve file using express",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "node index"
+    "start": "node index"
   },
   "keywords": [
-    "http",
+    "node",
     "server",
-    "with",
-    "node"
+    "using",
+    "express"
   ],
   "author": "ranjan",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
